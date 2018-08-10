@@ -6,7 +6,6 @@
         <variable
             name="model"
             type="nekono.inno.mvvmsample.MainViewModel"/>
-        <import type="android.view.View"/>
     </data>
 <android.support.constraint.ConstraintLayout
     android:layout_width="match_parent"
@@ -38,24 +37,12 @@
         android:layout_marginRight="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
+        android:enabled="@{model.enableButton}"
         android:text="Button"
-        android:visibility="@{model._enableButton ? View.VISIBLE : View.GONE}"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
-
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginStart="8dp"
-        android:text="@{model.textField}"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editText" />
+
 
 </android.support.constraint.ConstraintLayout>
 </layout>
